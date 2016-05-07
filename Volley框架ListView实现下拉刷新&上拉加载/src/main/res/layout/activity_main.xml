@@ -1,14 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.lenovo.day21volleylistviewapplicationpulldownpullup.MainActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imooc_banner"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/banner" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C9394A"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="全部课程"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="25dip"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dip"
+            android:background="#E61A5F"
+            android:onClick="btnOnclick"
+            android:text="刷新"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/load"
+            android:layout_width="wrap_content"
+            android:layout_height="25dip"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dip"
+            android:background="#E61A5F"
+            android:onClick="btnOnclick"
+            android:text="加载"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <com.example.lenovo.day21volleylistviewapplicationpulldownpullup.View.PullDownView
+        android:id="@+id/mPullDownView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.lenovo.day21volleylistviewapplicationpulldownpullup.View.PullDownView>
 
 </LinearLayout>
